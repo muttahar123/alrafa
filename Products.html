@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al rafa.uae</title>
+    <link rel="icon" type="image/png" href="/img/logo al rafa.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-top">
+        <div class="nav-item">
+          <img src="./img/logo al rafa.png" height="60px" width="60px" />
+          <span class="alrafa"> Al Rafa.uae</span>
+        </div>
+        <div class="nav-item">
+          <div class="search">
+            <input type="text" placeholder="Search..." class="search-input" />
+            <img
+              src="./img/search.png"
+              width="20"
+              height="20"
+              alt=""
+              class="search-icon"
+            />
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/index.html">
+            <span class="limited-offer">Back to home</span>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="nav-bottom">
+          <h3 class="menu-item" id="Air Force">Iphone 16</h3>
+          <h3 class="menu-item"id="Air Jordan">Iphone 15</h3>
+          <h3 class="menu-item" id="Blazer">Iphone 14</h3>
+          <h3 class="menu-item" id="Crater">Iphone 13</h3>
+          <h3 class="menu-item" id="Hippie">Iphone 12</h3>
+        </div> -->
+    </nav>
+
+   
+
+    <div class="parent container px-5 mx-auto ">
+        <div id="all-products" class="flex flex-wrap m-4"></div>
+      </div> 
+
+
+      <div class="payment"></div>
+        <span class="close">X</span>
+        <h1 class="pay-title">Personal Information</h1>
+        <label for="">Name and Surname</label>
+        <input type="text" placeholder='John Doe' class="pay-input">
+        <label for="">Phone Number</label>
+        <input type="text" placeholder='+1 234 333 5678' class="pay-input">
+        <label for="">Address</label>
+        <input type="text" placeholder='Elton St 21 22-145' class="pay-input">
+        <h1 class="pay-title">Card Information</h1>
+        <div class="car-icons">
+          <img src="./img/visa.png" width="40" alt="" class="card-icon">
+          <img src="./img/master.png" width="40" alt="" class="card-icon">
+        </div>
+        <input type="password" placeholder="Card Number" class="pay-input">
+        <div class="card-info">
+          <input type="text" placeholder="mm" class="pay-input small">
+          <input type="text" placeholder="yyyy" class="pay-input small">
+          <input type="text" placeholder="cvv" class="pay-input small">
+        </div>
+        <button class="pay-button">Checkout!</button>
+      </div>
+      </div>
+
+
+    <script src="products.js"></script>
+  </body>
+</html>

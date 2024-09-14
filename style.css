@@ -14,7 +14,7 @@ body {
 }
 
 nav {
-  background: #111;
+  background: #000000;
   color: white;
   padding: 20px 50px;
 }
@@ -24,12 +24,14 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
 .alrafa{
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
   padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 .search {
@@ -56,7 +58,8 @@ nav {
 
 .limited-offer {
   font-size: 20px;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid rgb(209, 207, 54);
+  color: aliceblue;
   cursor: pointer;
 }
 

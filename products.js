@@ -237,19 +237,23 @@ const close = document.querySelector(".close");
            ${products[i].price} 
           </h1>
 
-          <button class="product-button border px-20 text-yellow-700 rounded hover:bg-gray-400 active:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-300 ...">Buy now</button>
+          <button  class="product-button border px-20 text-yellow-700 rounded hover:bg-gray-400 active:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-300 ...">Buy now</button>
         </div>
       </div>
     </div>
   `;
     allProducts.innerHTML += productElements;
   }
-
-  productButton.addEventListener("click", () => {
+  
+// Event delegation for dynamically added buttons
+allProducts.addEventListener("click", (event) => {
+  if (event.target && event.target.matches(".product-button")) {
+    // Handle the button click event here
     payment.style.display = "flex";
-  });
-  
-  close.addEventListener("click", () => {
-    payment.style.display = "none";
-  });
-  
+  }
+});
+
+close.addEventListener("click", () => {
+  payment.style.display = "none";
+});
+

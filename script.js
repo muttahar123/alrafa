@@ -158,5 +158,5 @@ close.addEventListener("click", () => {
 });
 
 
-//products js....!
+
 

@@ -166,11 +166,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuIconClose = document.getElementById('menu-icon-close');
 
   menuButton.addEventListener('click', function () {
-    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-      mobileMenu.style.display = 'block';
-      menuIconOpen.classList.add('hidden');
-      menuIconClose.classList.remove('hidden');
-    } else {
+    const isMenuOpen = mobileMenu.style.display === 'block';
+    mobileMenu.style.display = isMenuOpen ? 'none' : 'block';
+    menuIconOpen.classList.toggle('hidden', !isMenuOpen);
+    menuIconClose.classList.toggle('hidden', isMenuOpen);
+  });
+
+  // Close the menu when clicking outside of it
+  document.addEventListener('click', function (event) {
+    if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
       mobileMenu.style.display = 'none';
       menuIconOpen.classList.remove('hidden');
       menuIconClose.classList.add('hidden');

@@ -233,7 +233,7 @@ const close = document.querySelector(".close");
           <p class="leading-relaxed mb-3">
           
           </p>
-          <h1  class="title-font d-flex text-lg font-medium text-gold-900 border bg-gray-300 rounded w-20 mb-3">
+          <h1  class="title-font d-flex px-5 text-lg font-medium text-gold-900 border bg-yellow-300 rounded w-20 mb-3">
            ${products[i].price} 
           </h1>
 

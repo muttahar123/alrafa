@@ -66,11 +66,14 @@ nav {
 .nav-bottom {
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap;
+  width: 100%;
 }
 
 .nav-bottom h3 {
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .menu-item {
@@ -80,6 +83,25 @@ nav {
   color: lightgray;
   font-weight: 400;
 }
+.nav-bottom::-webkit-scrollbar {
+  display: none; /* Hide scrollbars in WebKit browsers */
+}
+
+/* Add this to your Tailwind CSS configuration or directly in your CSS file */
+@layer components {
+  .menu-item {
+    @apply text-gray-300 hover:text-white cursor-pointer font-medium text-lg;
+  }
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
 
 .active-menu {
   border-bottom: 3px solid green;
